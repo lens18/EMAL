@@ -186,7 +186,7 @@ class UserSeeder extends Seeder
                  'statusAktif'=> $value['statusAktif'],
                  'kategori'=> $value['kategori'],
                  'statusSemakan' => $value['statusSemakan'],
-             ]);
+             ]);;
 
             //dd('key 0');
             $user->assignRole('staff');
