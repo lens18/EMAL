@@ -49,11 +49,11 @@ class CategorySeeder extends Seeder
 
         foreach ($category as $key => $value) {
             //dd($value['name']);
-            $newCategory = Category::create(['name' =>$value['name'] ]);
+            $newCategory = Category::firstOrCreate(['name' =>$value['name'] ]);
             foreach ($value['sub_category'] as $subCategory){
-                $newSubCategory = SubCategory::create(['category_id' =>  $newCategory->id, "name" => $subCategory['name'] ]);
+                $newSubCategory = SubCategory::firstOrCreate(['category_id' =>  $newCategory->id, "name" => $subCategory['name'] ]);
                 foreach ($subCategory['material'] as $material){
-                    MaterialCatergory::create(['sub_category_id' => $newSubCategory->id, "name" => $material['name'] ]);
+                    MaterialCatergory::firstOrCreate(['sub_category_id' => $newSubCategory->id, "name" => $material['name'] ]);
                 }
             }
         }

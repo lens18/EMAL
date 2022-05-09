@@ -47,7 +47,7 @@ class UserSeeder extends Seeder
                 'kategori'=> null ,
                 "email" => 'superadmin@gmail.com',
                 "password" => '12345678',
-                "katalaluanText" => '12345678',
+                "kataLaluanText" => '12345678',
                 'statusSemakan' => null,
             ],
         ];
@@ -71,7 +71,7 @@ class UserSeeder extends Seeder
                 'kategori'=> null ,
                 "email" => 'admin@gmail.com',
                 "password" => '12345678',
-                "katalaluanText" => '12345678',
+                "kataLaluanText" => '12345678',
                 'statusSemakan' => null,
             ],
         ];
@@ -95,18 +95,18 @@ class UserSeeder extends Seeder
                 'kategori'=> null ,
                 "email" => 'syaafi@gmail.com',
                 "password" => '12345678',
-                "katalaluanText" => '12345678',
+                "kataLaluanText" => '12345678',
                 'statusSemakan' => null,
             ]
         ];
 
         foreach ($superadmin as $key => $value) {
             //dd($value);
-            $user =  User::create([
+            $user =  User::firstOrCreate([
                  'name' => $value['name'],
                  "email" => $value['email'],
                  "password" =>  $value['password'] ? Hash::make($value['password']) : null,
-                 "katalaluanText" =>$value['password'],
+                 "kataLaluanText" =>$value['password'],
                  'noSyarikat'=> $value['noSyarikat'],
                  'noPerniagaan'=> $value['noPerniagaan'],
                  'namaSyarikat'=> $value['namaSyarikat'],
@@ -130,11 +130,11 @@ class UserSeeder extends Seeder
 
         foreach ($data as $key => $value) {
            // dd($key);
-           $user =  User::create([
+           $user =  User::firstOrCreate([
                 'name' => $value['name'],
                 "email" => $value['email'],
                 "password" =>  $value['password'] ? Hash::make($value['password']) : null,
-                "katalaluanText" =>$value['password'],
+                "kataLaluanText" =>$value['password'],
                 'noSyarikat'=> $value['noSyarikat'],
                 'noPerniagaan'=> $value['noPerniagaan'],
                 'namaSyarikat'=> $value['namaSyarikat'],
@@ -166,11 +166,11 @@ class UserSeeder extends Seeder
 
         foreach ($staffData as $key => $value) {
             //dd($value);
-            $user =  User::create([
+            $user =  User::firstOrCreate([
                  'name' => $value['name'],
                  "email" => $value['email'],
                  "password" =>  $value['password'] ? Hash::make($value['password']) : null,
-                 "katalaluanText" =>$value['password'],
+                 "kataLaluanText" =>$value['password'],
                  'noSyarikat'=> $value['noSyarikat'],
                  'noPerniagaan'=> $value['noPerniagaan'],
                  'namaSyarikat'=> $value['namaSyarikat'],
