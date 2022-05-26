@@ -22,6 +22,7 @@
               <thead class=" text-primary">
                 <th>Nama Sub Kategori</th>
                 <th>Nama Kategori</th>
+                <th>Butiran</th>
                 <th></th>
 
 

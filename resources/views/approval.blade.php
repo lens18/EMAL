@@ -48,7 +48,7 @@
                                         </td>
 
                                         <td>
-                                            <a class="btn btn-primary mr-1" href="/viewApplication/{{ $item->id }}">Lihat Permohonan</a>
+                                            <a class="btn btn-primary mr-1" href="/viewApplication/{{ $item->id }}" >Lihat Permohonan</a>
                                         </td>
                                     </tr>
                                 @endforeach

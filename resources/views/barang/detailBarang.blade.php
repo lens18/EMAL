@@ -11,8 +11,10 @@
     <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-            <h4 class="card-title">
-                MAKLUMAT BAHAN/BARANGAN YANG DILULUSKAN
+            <h4 class="card-title">MAKLUMAT BAHAN/BARANGAN YANG DILULUSKAN
+                @if($material->status == 'Terima')
+                        <a class="btn btn-primary mr-1 float-right" href="/sijil/{{ $material->id }}">Sijil Kelulusan</a>
+                @endif
             </h4>
         </div>
         <div style="margin-left:20px; margin-top:20px;">

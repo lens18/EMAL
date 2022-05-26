@@ -50,6 +50,7 @@ Route::group(['middleware' => ['role:user|admin|auth|staff|superadmin']], functi
     Route::get('/approved_material/{item_sub}', [\App\Http\Controllers\MaterialRegistrationController::class, 'approved_material'])->name('LBarang');
     Route::get('/details_material/{item_name}', [\App\Http\Controllers\MaterialRegistrationController::class, 'details_material'])->name('Barang');
     Route::get('/info_material/{item_id}', [\App\Http\Controllers\MaterialRegistrationController::class, 'info_material']);
+    Route::get('/sijil/{item_id}', [\App\Http\Controllers\MaterialRegistrationController::class, 'sijil']);
 
     Route::post('/getSubCategory', [\App\Http\Controllers\MaterialRegistrationController::class, 'getSub']);
     Route::post('/getMaterialCategory', [\App\Http\Controllers\MaterialRegistrationController::class, 'getMaterial']);
@@ -60,6 +61,8 @@ Route::group(['middleware' => ['role:user|admin|auth|staff|superadmin']], functi
     Route::post('/remove_category', [\App\Http\Controllers\MaterialController::class, 'remove_category']);
     Route::post('/remove_subCategory', [\App\Http\Controllers\MaterialController::class, 'remove_subCategory']);
     Route::post('/remove_materialCategory', [\App\Http\Controllers\MaterialController::class, 'remove_materialCategory']);
+
+    Route::post('/changeStatus', [App\Http\Controllers\MaterialController::class, 'changeStatus']);
 
     //Route::get('/material_registration', [\App\Http\Controllers\MaterialRegistrationController::class, 'category']);
 });

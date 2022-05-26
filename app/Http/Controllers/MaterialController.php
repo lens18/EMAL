@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Material;
 use App\Models\MaterialCatergory;
 use App\Models\SubCategory;
 use Illuminate\Http\Request;
@@ -75,6 +76,27 @@ class MaterialController extends Controller
         MaterialCatergory::where('id', $r->materialCategory_id)->delete();
 
         return ["success" => "Category Deleted"];
+    }
+
+    public function changeStatus(Request $r){
+
+       $material=  Material::where('id', $r->id)->first();
+
+       if($material){
+
+            switch ($r->status) {
+                case 'Terima':
+                    $material->status = 'Terima';
+                    break;
+                case 'Tidak Terima':
+                    $material->status = 'Tidak Terima';
+                    break;
+            }
+            $material->save();
+            return $material;
+       }
+
+       return "error";
     }
 
 

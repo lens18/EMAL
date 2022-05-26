@@ -357,15 +357,7 @@
                                                                 <input type="file" class="block mt-1 w-full" name="" />
                                                             </td>
                                                         </tr>
-                                                        <tr>
-                                                            <td>Semua dokumen permohonan dicop rasmi pejabat pemohon dan
-                                                                ditandatangan ringkas</td>
-                                                            <td>N/A</td>
-                                                            <td>
-                                                                <!-- Upload Document -->
-                                                                <input type="file" class="block mt-1 w-full" name="" />
-                                                            </td>
-                                                        </tr>
+
                                                     </tbody>
                                                 </table>
                                             </div>

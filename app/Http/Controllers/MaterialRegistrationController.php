@@ -65,7 +65,7 @@ class MaterialRegistrationController extends Controller
 
             $material = Material::where(['user_id'=> Auth::user()->id , 'namaBahan'=> $r->item_name])
             ->with(['materialCategori'])->distinct()
-            ->get(['id','namaBahan','namaPengilang','jenama','negaraPengilang']);
+            ->get();
 
             //dd($material);
             return view('barang.Barang')->with('material', $material);
@@ -76,8 +76,9 @@ class MaterialRegistrationController extends Controller
 
             $material = Material::where('namaBahan' , $r->item_name)
             ->with(['materialCategori'])->distinct()
-            ->get(['id','namaBahan','namaPengilang','jenama','negaraPengilang']);
+            ->get();
 
+            //dd($material);
             return view('barang.Barang')->with('material', $material);
         }
 
@@ -100,6 +101,18 @@ class MaterialRegistrationController extends Controller
             $user = User::where('id', $material->user_id)->first();
 
             return view('barang.detailBarang')
+            ->with('material', $material)
+            ->with('user', $user);
+        }
+    }
+
+    public function sijil(Request $r){
+        if(Auth::user()->roles->first()->name == "superadmin" || Auth::user()->roles->first()->name == "admin" || Auth::user()->roles->first()->name == "user"){
+            $material = Material::where('id', $r->item_id)
+            ->with(['materialCategori'])->first();
+            $user = User::where('id', $material->user_id)->first();
+
+            return view('barang.sijilKelulusan')
             ->with('material', $material)
             ->with('user', $user);
         }
@@ -140,6 +153,7 @@ class MaterialRegistrationController extends Controller
         $material->ratedVoltage = $r->ratedVoltage;
         $material->size = $r->size;
         $material->coreNo = $r->coreNo;
+        $material->status = 'Pending';
 
         if($r->has('perakuan'))
         {

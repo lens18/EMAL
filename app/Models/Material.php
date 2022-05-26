@@ -23,6 +23,7 @@ class Material extends Model
         'size',
         'coreNo',
         'perakuan',
+        'status'
     ];
 
     protected $table = "material";
