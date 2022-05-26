@@ -33,7 +33,7 @@
                     <td>{{ $item->subCategori->name ?? ''}}</td>
                     <td> {{ $item->categori->name ?? ''}}</td>
                     <td>
-                        <a class="btn btn-primary mr-1" href="/approved_material/{{ $item->subCategori }}"><i class="fas fa-search"></i></a>
+                        <a class="btn btn-primary mr-1" href="/approved_material/{{ $item->subKategori }}"><i class="fas fa-search"></i></a>
                     </td>
                 </tr>
                 @endforeach
