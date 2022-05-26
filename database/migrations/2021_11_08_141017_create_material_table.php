@@ -28,6 +28,7 @@ class CreateMaterialTable extends Migration
             $table->string('size')->nullable();
             $table->string('coreNo')->nullable();
             $table->string('perakuan')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }
