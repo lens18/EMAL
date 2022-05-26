@@ -30,7 +30,7 @@
               <tbody>
                 @foreach ($material as $item)
                 <tr>
-                    <td>{{ $item->subCategori->name ?? ''}}</td>
+                    <td>{{ $item->subKategori->name ?? ''}}</td>
                     <td> {{ $item->categori->name ?? ''}}</td>
                     <td>
                         <a class="btn btn-primary mr-1" href="/approved_material/{{ $item->subKategori }}"><i class="fas fa-search"></i></a>
