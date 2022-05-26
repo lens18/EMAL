@@ -143,7 +143,7 @@ class MaterialRegistrationController extends Controller
 
         //dd($kategory);
         $material->kategori = $kategory[0];
-        $material->subkategori = $r->subkategori;
+        $material->subKategori = $r->subkategori;
         $material->namaBahan = $r->namaBahan;
         $material->jenama = $r->jenama;
         $material->namaPengilang = $r->namaPengilang;
