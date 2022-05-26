@@ -13,7 +13,7 @@
         <div class="card-header">
             <h4 class="card-title">MAKLUMAT BAHAN/BARANGAN YANG DILULUSKAN
                 @if($material->status == 'Terima')
-                        <a class="btn btn-primary mr-1 float-right" href="/sijil/{{ $material->id }}">Sijil Kelulusan</a>
+                        <a class="btn btn-primary mr-1 float-right" href="/sijil/{{ $material->id }}" target="_blank">Sijil Kelulusan</a>
                 @endif
             </h4>
         </div>
