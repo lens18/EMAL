@@ -54,7 +54,7 @@ class UserSeeder extends Seeder
 
         $data = [
             [
-                'name' => 'admin',
+                'name' => 'Pegawai',
                 'noSyarikat'=> null ,
                 'noPerniagaan'=> null ,
                 'namaSyarikat'=> null ,
