@@ -21,7 +21,7 @@
 @if (Session::has('success'))
 <script>
     Swal.fire(
-        'Successful!',
+        'Berjaya!',
         '{{ Session::get('
         success ')}}',
         'success'
@@ -461,13 +461,14 @@
         //var materialCategory_id = $(e.currentTarget).attr('data-materialCategory-id');
 
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: 'Anda Pasti?',
+            text: "Anda tidak boleh mengubah semula!",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            cancelButtonText: "Tidak!",
+            confirmButtonText: 'Ya, buang!'
         }).then((result) => {
             if (result.isConfirmed) {
 
@@ -484,8 +485,7 @@
 
                         Swal.fire({
                             icon: 'success',
-                            title: 'Deleted',
-                            text: 'Successfully deleted category',
+                            title: 'Telah di buang!',
                             confirmButtonText: 'Ok',
                         }).then((result) => {
                             if (result.isConfirmed) {

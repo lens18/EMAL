@@ -316,7 +316,7 @@ aria-hidden="true">
                     <div class="row">
 
                         <div class="col-md-12 mb-3">
-                            <p>Katalaluan Lama</p>
+                            <p>Katalaluan Baru</p>
                             <input type="password" name="new_password" class="form-control" id="new_password">
                         </div>
 
@@ -342,7 +342,7 @@ aria-hidden="true">
 
                     </div>
                     <div class="text-right">
-                        <button type="submit" class="btn btn-primary">Tuka Kata Laluan</button>
+                        <button type="submit" class="btn btn-primary">Tukar Kata Laluan</button>
                     </div>
                 </form>
         </div>
